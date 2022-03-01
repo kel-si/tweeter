@@ -1,0 +1,21 @@
+button {
+  background-color: rgb(49, 100, 158);
+  color: #FFF;
+  font-family: bungee, sans-serif;
+}
+
+form > div {
+  font-family: bungee, sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+
+form > label {
+  border: none;
+}
+
+.counter {
+  font-family: bungee, sans-serif;
+  text-align: right;
+}
+

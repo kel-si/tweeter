@@ -14,21 +14,14 @@ header {
   background-color: #000000;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
   color: #FFF;
+  
   padding-top: 5em;
-}
-
-.avatar {
 }
 
 .username {
   padding-left: 1em;
   padding-right: 1em;
   margin: 0.5em;
-  
-}
-
-html {
-
 }
 
 #nav-header-parent {
