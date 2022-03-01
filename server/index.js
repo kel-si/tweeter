@@ -7,6 +7,8 @@ const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
 
+//middleware
+//get access to the post data
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
