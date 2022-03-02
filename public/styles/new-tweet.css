@@ -29,3 +29,7 @@ form > div {
 #tweet-text {
   border-bottom: 3px solid rgb(80, 80, 80);
 }
+
+.over-count {
+  color: darkred;
+}
