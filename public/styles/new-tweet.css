@@ -22,7 +22,7 @@
   font-family: "bungee", sans-serif;
 }
 
-.new-tweet footer {
+.new-tweet-footer {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
