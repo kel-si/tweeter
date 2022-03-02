@@ -9,5 +9,9 @@ $(document).ready(function () {
     if (charCount > 140) {
       currentCount.addClass('over-count')
     }
+    if (charCount <= 140) {
+      currentCount.removeClass('over-count')
+    }
+
   });
 });
