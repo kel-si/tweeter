@@ -25,6 +25,9 @@
     <!-- New Tweet CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+    <!-- Tweet Container CSS -->
+    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
+
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
 
@@ -41,7 +44,7 @@
       <!-- Top nav bar (fixed) -->
       <nav>
         <span>
-          tweeter
+          tweeter🪐
         </span>
         <div> 
           <span>Write a new tweet</span>
@@ -51,7 +54,7 @@
   
       <!-- Page-specific (main) content here -->
   
-      <header>
+      <header class="page-header">
         <div class="avatar">
             <img src="/images/profile-hex.png"> 
         </div>
@@ -65,26 +68,32 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form class="new-tweet-input-form" action="/tweets" method="POST">
+        <form class="tweet-form" action="/tweets" method="POST">
           <label id="humming" for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div>
-            <button type="submit">Tweet</button>
+          <textarea name="text" id="tweet-text" class="text-area"></textarea>
+          <div class="new-tweet-footer">
+            <button type="submit" class="tweet-button">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
-    <section>
+    <section class = "tweet-container">
       <article class="tweet">
         <header>
-          <p>pic</p>
+          <div class="tweet-user">
+          <i class="fa-solid fa-face-smile"></i>
           <p>Newton</p>
+        </div>
           <p>@SirIsaac</p>
         </header>
         Hello World!
         <footer>
           <p>10 days ago</p>
-          <p>icons</p>
+          <div class="fa-solid-icons">
+          <i class="fa-solid fa-flag"></i>
+          <i class="fa-solid fa-retweet"></i>
+          <i class="fa-solid fa-heart"></i>
+        </div>
         </footer>
       </article>
     </section>

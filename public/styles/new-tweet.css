@@ -1,33 +1,31 @@
-button {
-  background-color: rgb(49, 100, 158);
-  color: #FFF;
-  font-family: bungee, sans-serif;
-}
-
-form > div {
-  font-family: bungee, sans-serif;
-  display: flex;
-  justify-content: space-between;
-}
-
-.new-tweet-input-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.counter {
-  font-family: bungee, sans-serif;
-  text-align: right;
-}
 
 .new-tweet {
-  display: flex;
+  padding-top: 2em;
+  padding-bottom: 2em;
   width: 100%;
-  flex-direction: column;
 }
 
-#tweet-text {
-  border-bottom: 3px solid rgb(80, 80, 80);
+.new-tweet textarea {
+  border-bottom: 5px solid rgb(0, 0, 0);
+  width: 100%;
+  color: black;
+}
+
+.new-tweet input {
+  font-family: "bungee", sans-serif;
+}
+
+.tweet-button {
+  background-color: rgb(49, 100, 158);
+  color: aliceblue;
+  padding: 7px;
+  font-family: "bungee", sans-serif;
+}
+
+.new-tweet footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
 .over-count {

@@ -1,29 +1,10 @@
-* {
-  border: 1px solid black
-}
-
-header {
+.page-header {
   display: flex;
   height: 400px;
-  height: 100%;
-  flex-basis: 100%;
-  display: flex;
-  justify-content: center;
+  width: 100%;
   align-items: center;
-  flex-direction: column;
-  background-color: #000000;
+  background-color: black;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-  color: #FFF;
-  
+  flex-direction: column;
   padding-top: 5em;
-}
-
-.username {
-  padding-left: 1em;
-  padding-right: 1em;
-  margin: 0.5em;
-}
-
-#nav-header-parent {
-  position: relative;
 }
