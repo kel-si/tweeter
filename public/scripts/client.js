@@ -4,12 +4,11 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-//function that generates the DOM structure for a tweet, given a tweet object (from the form)
-
 $(document).ready(function () {
 
+  //adds an article with the tweet info to the DOM
   const createTweetElement = function(tweetObj) {
-    console.log("tweetObj", tweetObj);
+    const date = new Date(tweetObj.created_at);
     const $tweet = $(`<article class="tweet">
     <header>
       <div class="tweet-user">
@@ -20,7 +19,7 @@ $(document).ready(function () {
     </header>
     ${tweetObj.content.text}
     <footer>
-      <p>10 days ago</p>
+      <span class="timeago">${timeago.format(date)}</span>
       <div class="fa-solid-icons">
       <i class="fa-solid fa-flag"></i>
       <i class="fa-solid fa-retweet"></i>
@@ -28,12 +27,22 @@ $(document).ready(function () {
     </div>
     </footer>
   </article>`);  
-  return $tweet; // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+  return $tweet;
   }
   
   const $tweet = createTweetElement(tweetData);
   $('.tweet-container').append($tweet);
-  console.log("$tweet", $tweet);
+  
+  //takes an array of tweet objects
+  const renderTweets = function(tweets) {
+    for(let tweet in tweets) {
+      createTweetElement(tweet);
+      // $('.timeago').append(timeago.format(new Date()));
+    }
+    
+
+  }
+
 });
 
 
