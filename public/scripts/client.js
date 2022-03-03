@@ -42,13 +42,23 @@ const tweetData = {
 
 $(document).ready(function () {
 
+  $('.tweet-form').on('submit', function(event){
+    event.preventDefault();
+    const serData = $(this).serialize(); //returns text=
+    $.ajax({
+      url: "/tweets",
+      method: "POST",
+      data: serData
+    })
+    
+  });
+
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
       const $returnValue = createTweetElement(tweet);
       $('.tweet-container').append($returnValue);
     }
   }
-
   //adds an article with the tweet info to the DOM
   const createTweetElement = function(tweetObj) {
     const date = new Date(tweetObj.created_at);
@@ -72,10 +82,6 @@ $(document).ready(function () {
   </article>`;  
   return $tweet;
   }
-  
-  const $tweet = createTweetElement(tweetData);
-  $('.tweet-container').append($tweet);
-  console.log("$tweet", $tweet)
 
   renderTweets(data);
 });
