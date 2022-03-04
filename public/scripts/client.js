@@ -5,12 +5,23 @@ $(document).ready(function () {
     const serializedData = $(this).serialize();
     const tweetInput = $('#tweet-text').val();
     if (tweetInput.length === 0) {
-      return alert("Please write a tweet to post.");
+      $('.validate').text("Please write a tweet to post.").slideDown(() => {
+      setTimeout(() => {
+        $('.validate').slideUp()
+        }, 3000);
+      });
+      return;
     }
     
     if (tweetInput.length > 140) {
-      return alert("Too many characters!!");
+      $('.validate').text("Too many characters!!").slideDown(() => {
+      setTimeout(() => {
+        $('.validate').slideUp()
+        }, 3000);
+      });
+      return;
     }
+
     $.ajax({
       url: "/tweets",
       method: "POST",
@@ -20,6 +31,15 @@ $(document).ready(function () {
 
   //receive array of tweets as JSON
   const loadTweets = function() {
+    $('.tweet-form').ready(function() {
+      $.ajax('/tweets', {
+        method: 'GET'
+      })
+      .then(function(data) {
+        renderTweets(data)
+      });
+    });
+
     $('.tweet-form').on('submit', function() {
       $.ajax('/tweets', {
         method: 'GET'

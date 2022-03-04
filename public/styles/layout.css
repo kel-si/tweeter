@@ -16,7 +16,7 @@ html {
 
  body {
   color: #545149;
-  background-color: #c1dbff;
+  background-color: #F7EBEC;
   font-size: 24px;
   font-family: Source Sans Pro, sans-serif;
 }
@@ -27,15 +27,20 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #c1dbff;
+  /* background-color: #DDBDD5; */
   padding-top: 10px;
 }
 
 .fa-solid-icons ::before {
-  color: #00142f;
+  color: #877997;
   font-size: 1rem;
 } 
 
-.tweet-user ::before {
-  color: #764e90;
-} 
+/* error messages */
+.validate {
+  color:rgb(164, 14, 14);
+}
+
+.no-error {
+  display: none;
+}
