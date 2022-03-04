@@ -35,12 +35,13 @@ html {
   color: #877997;
   font-size: 1rem;
 } 
+.fa-solid-icons:hover ::before {
+  color: #25042a;
+}
 
 /* error messages */
 .validate {
-  color:rgb(164, 14, 14);
-}
-
-.no-error {
-  display: none;
+  color:#000000;
+  background-color: rgb(163, 81, 94);
+  
 }

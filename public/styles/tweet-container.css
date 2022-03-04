@@ -1,5 +1,6 @@
 article.tweet {
   border: 3px solid black;
+  border-radius: 10px;
   padding: 0.5em;
   margin-bottom: 0.5em;
 }
@@ -20,4 +21,8 @@ article.tweet footer {
   justify-content: space-between;
   border-top: 2px solid black;
   align-items: baseline;
+}
+
+article.tweet:hover {
+  box-shadow: 7px 5px #9b9c9e;
 }

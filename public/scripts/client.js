@@ -5,7 +5,7 @@ $(document).ready(function () {
     const serializedData = $(this).serialize();
     const tweetInput = $('#tweet-text').val();
     if (tweetInput.length === 0) {
-      $('.validate').text("Please write a tweet to post.").slideDown(() => {
+      $('.validate').text("Please write a tweet to post.🚀").slideDown(() => {
       setTimeout(() => {
         $('.validate').slideUp()
         }, 3000);
@@ -14,7 +14,7 @@ $(document).ready(function () {
     }
     
     if (tweetInput.length > 140) {
-      $('.validate').text("Too many characters!!").slideDown(() => {
+      $('.validate').text("Too many characters!!⛔️").slideDown(() => {
       setTimeout(() => {
         $('.validate').slideUp()
         }, 3000);
