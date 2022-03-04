@@ -1,9 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 $(document).ready(function () {
   //updates array of tweet objects
   $('.tweet-form').on('submit', function(event){
@@ -45,8 +39,18 @@ $(document).ready(function () {
       $('.tweet-container').prepend($returnValue);
     }
   }
+
+  //Prevent XSS
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
+
   //adds an article with the tweet info to the DOM
   const createTweetElement = function(tweetObj) {
+    const safeHTML = `<p>${escape(tweetObj.content.text)}</p>`;
     const date = new Date(tweetObj.created_at);
     const $tweet = `<article class="tweet">
     <header>
@@ -56,7 +60,7 @@ $(document).ready(function () {
     </div>
       <p>${tweetObj.user.handle}</p>
     </header>
-    ${tweetObj.content.text}
+    ${safeHTML}
     <footer>
       <span class="timeago">${timeago.format(date)}</span>
       <div class="fa-solid-icons">
