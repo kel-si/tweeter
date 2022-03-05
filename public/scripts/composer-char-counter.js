@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
   console.log("DOM has loaded");
 
   $('#tweet-text').on('input', function(event) {
@@ -6,11 +6,9 @@ $(document).ready(function () {
     let currentCount = $(this).siblings('div').children('.counter').text(140 - charCount);
 
     if (charCount > 140) {
-      $(".counter").addClass('over-count')
+      $(".counter").addClass('over-count');
     } else {
-      $(".counter").removeClass('over-count')
-    
+      $(".counter").removeClass('over-count');
     }
-
   });
 });
