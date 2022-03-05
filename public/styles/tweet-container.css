@@ -27,8 +27,3 @@ article.tweet:hover {
   box-shadow: 7px 5px #9b9c9e;
 }
 
-@media only screen and (min-width: 1024px) {
-  .tweet-container {
-    margin-left: 50px;
-  }
-}

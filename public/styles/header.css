@@ -21,9 +21,5 @@
 
 @media only screen and (min-width: 1024px) {
   .page-header {
-    border: 10px solid rebeccapurple;
-  }
-  .tweet-container {
-    margin-left: 50px;
   }
 }
