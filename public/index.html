@@ -69,22 +69,21 @@
     </header>
   </div>
   
-
-    <main class="container">
-      <section class="new-tweet">
-        <div class="validate"></div>
-        <form class="tweet-form" action="/tweets" method="POST">
-          <label id="humming" for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text" class="text-area"></textarea>
-          <div class="new-tweet-footer">
-            <button type="submit" class="tweet-button">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
+      <main class="container">
+        <section class="new-tweet">
+          <div class="validate"></div>
+          <form class="tweet-form" action="/tweets" method="POST">
+            <label id="humming" for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text" class="text-area"></textarea>
+            <div class="new-tweet-footer">
+              <button type="submit" class="tweet-button">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+      <section class = "tweet-container">
       </section>
-    <section class = "tweet-container">
-    </section>
-    </main>
+      </main>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </body>
 </html>

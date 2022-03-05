@@ -10,16 +10,14 @@
   color: #1D1E2D
 }
 
-
 @media only screen and (min-width: 1024px) {
   .page-header {
    padding-top: 20em;
-   
   }
 }
 
-
 @media only screen and (min-width: 1024px) {
   .page-header {
+    width: auto;
   }
 }
