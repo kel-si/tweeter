@@ -61,20 +61,14 @@ html {
   
 }
 
-/* @media only screen and (min-width: 1025) {
- .container {
-    justify-content: row;
-  }
-} */
-
-/* @media only screen and (min-width: 1025) {
-  .container {
-     justify-content: row;
+ @media only screen and (min-width: 1024px) {
+   body{ 
+     display: flex;   
+      flex-direction: row;
+      justify-content: space-between;
    }
- } */
-
- @media only screen and (min-width: 800) {
-   body .container {    
-      flex-direction: column; 
+   .tweet {
+     max-width: 75%;
+     align-items: center;
    }
  }

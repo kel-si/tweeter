@@ -35,3 +35,12 @@
 .over-count {
   color: darkred;
 }
+
+@media only screen and (min-width: 1024px) {
+  .new-tweet {
+    padding-top: 5em;
+  }
+  .tweet-form {
+    padding-left: 50px;
+  }
+}
