@@ -27,16 +27,31 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* background-color: #DDBDD5; */
   padding-top: 10px;
 }
 
-.fa-solid-icons ::before {
+.fa-flag:before {
   color: #877997;
-  font-size: 1rem;
-} 
-.fa-solid-icons:hover ::before {
+}
+
+.fa-retweet:before {
+  color: #5b6b91
+}
+
+.fa-heart:before {
+  color:#d6a3b2
+}
+
+.fa-flag:hover:before {
   color: #25042a;
+}
+
+.fa-retweet:hover:before {
+  color: #1b1c2f
+}
+
+.fa-heart:hover:before {
+  color: #a84b67
 }
 
 /* error messages */
@@ -45,3 +60,21 @@ html {
   background-color: rgb(163, 81, 94);
   
 }
+
+/* @media only screen and (min-width: 1025) {
+ .container {
+    justify-content: row;
+  }
+} */
+
+/* @media only screen and (min-width: 1025) {
+  .container {
+     justify-content: row;
+   }
+ } */
+
+ @media only screen and (min-width: 800) {
+   body .container {    
+      flex-direction: column; 
+   }
+ }

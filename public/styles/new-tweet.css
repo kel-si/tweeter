@@ -6,7 +6,10 @@
 }
 
 .new-tweet textarea {
-  border-bottom: 5px solid rgb(0, 0, 0);
+  border: none;
+  border-bottom: 4px solid rgb(0, 0, 0);
+  background-color: #F7EBEC;
+  height: 24px;
   width: 100%;
   color: black;
 }
@@ -16,7 +19,8 @@
 }
 
 .tweet-button {
-  background-color: rgb(49, 100, 158);
+  background-color: rgb(27, 25, 71);
+  border-radius: 10px;
   color: aliceblue;
   padding: 7px;
   font-family: "bungee", sans-serif;
