@@ -22,12 +22,12 @@ $(document).ready(function() {
       });
       return;
     }
-
     $.ajax({
       url: "/tweets",
       method: "POST",
       data: serializedData
     });
+    
   });
 
   //receive array of tweets as JSON

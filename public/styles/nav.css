@@ -1,4 +1,6 @@
 nav {
+  background-color: #707f8b;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
   color: #FFF;
   height: 120px;
   width: 100%;
@@ -30,5 +32,6 @@ nav > div {
 @media only screen and (min-width: 1024px) {
   nav {    
     background-color: #1b1c2f;
+    background-image: none;
   }
 }
