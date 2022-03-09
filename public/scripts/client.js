@@ -29,6 +29,9 @@ $(document).ready(function() {
       method: "POST",
       data: serializedData
     });
+
+    //clear the input
+    $('#tweet-text').val('');
     
   });
 
