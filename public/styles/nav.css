@@ -25,6 +25,10 @@ nav > div {
   align-items: center;
 }
 
+.drop-menu {
+  padding-right: 30px;
+}
+
 .fa-solid {
   color: #ffffff;
 }
