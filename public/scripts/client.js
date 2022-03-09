@@ -32,7 +32,9 @@ $(document).ready(function() {
 
     //clear the input
     $('#tweet-text').val('');
-    
+
+    //reset counter
+    $('output').val(140);
   });
 
   //receive array of tweets as JSON
