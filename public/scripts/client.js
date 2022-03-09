@@ -1,10 +1,11 @@
 $(document).ready(function() {
-  //updates array of tweet objects
+  //allow a tweet to be added to database
   $('.tweet-form').on('submit', function(event) {
     event.preventDefault();
     const serializedData = $(this).serialize();
     const tweetInput = $('#tweet-text').val();
     
+    //check for a tweet input before submit
     if (tweetInput.length === 0) {
       $('.validate').text("Please write a tweet to post.🚀").slideDown(() => {
         setTimeout(() => {
@@ -14,6 +15,7 @@ $(document).ready(function() {
       return;
     }
     
+    //check tweet is within character limit
     if (tweetInput.length > 140) {
       $('.validate').text("Too many characters!!⛔️").slideDown(() => {
         setTimeout(() => {
@@ -69,7 +71,7 @@ $(document).ready(function() {
     return div.innerHTML;
   };
 
-  //adds an article with the tweet info to the DOM
+  //adds tweet info to the DOM
   const createTweetElement = function(tweetObj) {
     const safeHTML = `<p>${escape(tweetObj.content.text)}</p>`;
     const date = new Date(tweetObj.created_at);
